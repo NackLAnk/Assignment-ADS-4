@@ -31,6 +31,14 @@ public class MyHashTable<K, V> {
         if(key == null) {
             throw new IllegalArgumentException("Key cannot be null");
         }
+        int index = hash(key);
+        HashNode<K, V> node = chainArray[index];
+        while (node != null) {
+            if (node.key.equals(key)) {
+                node.value = value;
+                return;
+            }
+        }
     }
     public V get (K key) {}
     public V remove (K key) {}
