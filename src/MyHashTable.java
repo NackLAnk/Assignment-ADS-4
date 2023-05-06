@@ -19,7 +19,10 @@ public class MyHashTable<K, V> {
     public MyHashTable() {
         this(16);
     }
-    public MyHashTable(int M) {}
+    public MyHashTable(int M) {
+        this.M = M;
+        this.size = 0;
+    }
     private int hash(K key) {}
     public void put (K key, V value) {}
     public V get (K key) {}
