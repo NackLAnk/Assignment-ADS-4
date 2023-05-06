@@ -22,9 +22,16 @@ public class MyHashTable<K, V> {
     public MyHashTable(int M) {
         this.M = M;
         this.size = 0;
+        this.chainArray = (HashNode<K, V>[]) new HashNode[M];
     }
-    private int hash(K key) {}
-    public void put (K key, V value) {}
+    private int hash(K key) {
+        return Math.abs(key.hashCode() % M);
+    }
+    public void put (K key, V value) {
+        if(key == null) {
+            throw new IllegalArgumentException("Key cannot be null");
+        }
+    }
     public V get (K key) {}
     public V remove (K key) {}
     public boolean contains (V value) {}
