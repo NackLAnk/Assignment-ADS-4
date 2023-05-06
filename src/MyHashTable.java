@@ -40,8 +40,8 @@ public class MyHashTable<K, V> {
             }
         }
     }
-    public V get (K key) {}
-    public V remove (K key) {}
-    public boolean contains (V value) {}
-    public K getKey (V value) {}
+    public V get (K key) {return null;}
+    public V remove (K key) {return null;}
+    public boolean contains (V value) {return true;}
+    public K getKey (V value) {return null;}
 }
