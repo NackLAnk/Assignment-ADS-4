@@ -187,4 +187,13 @@ public class MyHashTable<K, V> {
         }
         return null;
     }
+    public void putAll(MyHashTable<K, V> otherHashTable) {
+        for (int i = 0; i < otherHashTable.M; i++) {
+            HashNode<K, V> node = otherHashTable.chainArray[i];
+            while (node != null) {
+                put(node.key, node.value);
+                node = node.next;
+            }
+        }
+    }
 }

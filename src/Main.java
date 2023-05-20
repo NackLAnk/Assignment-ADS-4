@@ -35,5 +35,12 @@ public class Main {
                 int bucketSize = table.getBucketSize(i);
                 System.out.println("Bucket " + i + " size: " + bucketSize);
             }
+            MyHashTable<String, Integer> sourceTable = new MyHashTable<>();
+            sourceTable.put("A", 1);
+            sourceTable.put("B", 2);
+            sourceTable.put("C", 3);
+
+            MyHashTable<String, Integer> destinationTable = new MyHashTable<>();
+            destinationTable.putAll(sourceTable);
         }
 }
